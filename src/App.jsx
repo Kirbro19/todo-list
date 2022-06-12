@@ -16,6 +16,10 @@ export const App = () => {
     setTodoItems(newTodoItems);
   };
 
+  const handleClearClick = () => {
+    setTodoItems([]);
+  }
+
   console.log("todoItems:", todoItems);
 
   return (
@@ -23,6 +27,8 @@ export const App = () => {
       <h1 className="app-title">To-do list</h1>
       <AddForm onSubmit={handleFormSubmit} />
       <TodoList todoItems={todoItems} onTodoToggle={handleTodoToggle} />
+      <button className="app-button-clear" onClick={handleClearClick}>clear</button>
+
     </div>
   );
 };

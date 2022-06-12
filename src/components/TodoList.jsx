@@ -2,6 +2,7 @@ import React from "react";
 import { ToDoItem } from "./TodoItem";
 
 export const TodoList = (props) => {
+
   const handleTodoToggle = (id) => (isCompleted) => {
     console.log("isCompleted:", isCompleted);
     props.onTodoToggle({ id, isCompleted });

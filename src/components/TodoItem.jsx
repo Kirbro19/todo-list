@@ -8,7 +8,7 @@ export const ToDoItem = (props) => {
 
   return (
     <div className="todo-item">
-      <div className="todo-wrapper">
+      <div className="todo--item-wrapper">
         <li
           style={{ textDecoration: props.completed ? "line-through" : "none" }}
         >
@@ -17,6 +17,7 @@ export const ToDoItem = (props) => {
       </div>
       <div>
         <input
+          className="todo-item-checkbox"
           type="checkbox"
           checked={props.completed}
           onChange={handleChange}
